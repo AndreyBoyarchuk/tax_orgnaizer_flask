@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Edit Categories</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='sedit.css') }}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $(".add").click(function() {
+                    var category = $(this).attr('id');
+                    var input = $("<input>").attr({
+                        "type": "text",
+                        "name": category,
+                        "required": "required"
+                    });
+                    var checkbox = $("<input>").attr({
+                        "type": "checkbox",
+                        "name": "delete_" + category
+                    });
+                    $(this).before(checkbox);
+                    $(this).before(input);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Select a file to edit</h1>
+        <ul>
+            {% for file_item in files %}
+            <li><a href="/edit?file={{file_item}}">{{file_item.rsplit('.', 1)[0]}}</a></li>
+            {% endfor %}
+        </ul>
+
+        {% if data %}
+        <form action="/edit?file={{file}}" method="POST">
+            <div class="container multi-columns">
+                {% for category, subcategories in data.items() %}
+                    <div class="category-block">
+                        <h2>{{category}}</h2>
+                        <input type="hidden" name="category" value="{{category}}">
+                        {% for subcategory in subcategories %}
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" name="delete_{{category}}" value="{{subcategory}}">
+                            <input type="text" class="form-check-label" name="{{category}}" value="{{subcategory}}" required>
+                        </div>
+                        {% endfor %}
+                        <button type="button" class="add btn btn-primary mb-3" id="{{category}}">Add</button>
+                    </div>
+                {% endfor %}
+                <input type="submit" class="btn btn-success mt-3" value="Save">
+            </div>
+        </form>
+        {% endif %}
+
+    </body>
+</html>

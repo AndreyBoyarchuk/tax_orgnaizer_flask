@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tax Organizer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<form action="/choose_json" method="post">
+  <label for="json_choice">Choose JSON:</label>
+ <select name="json_choice" id="json_choice">
+    <option value="categories1.json" {% if current_json =="categories1.json" %}selected{% endif %}>categories1.json</option>
+    <option value="categories2.json" {% if current_json =="categories2.json" %}selected{% endif %}>categories2.json</option>
+    <option value="categories3.json" {% if current_json =="categories3.json" %}selected{% endif %}>categories3.json</option>
+</select>
+  <input type="submit" value="Submit">
+<p>Selected JSON file: {{current_json}}</p>
+</form>
+
+<form action="/" method="post">
+  <label for="company_name">Company Name:</label>
+  <input type="text" id="company_name" name="company_name" required>
+
+  <br>
+  <label>Select categories:</label>
+
+  <br>
+  <div class="category-columns">
+    {% for category, subcategories in categories.items() %}
+      <fieldset>
+        <legend>{{ category }}</legend>
+        {% for subcategory in subcategories %}
+          <input type="checkbox" id="{{ subcategory }}" name="categories" value="{{ subcategory }}">
+          <label for="{{ subcategory }}">{{ subcategory }}</label>
+          <br>
+        {% endfor %}
+      </fieldset>
+    {% endfor %}
+  </div>
+  <br>
+  <label for="include_cogs">Include Cost of Goods Sold:</label>
+  <input type="checkbox" id="include_cogs" name="include_cogs">
+  <br>
+  <label for="include_auto_expenses">Include Auto Expenses Report:</label>
+  <input type="checkbox" id="include_auto_expenses" name="include_auto_expenses">
+  <br>
+  <label for="include_home_office">Include Home Office Expenses Report:</label>
+  <input type="checkbox" id="include_home_office" name="include_home_office">
+  <input type="submit" name="action" value="Generate Tax Organizer">
+  <input type="submit" name="action" value="Generate Revenue Report">
+  <input type="submit" name="action" value="Generate Home Office Table">
+  <input type="submit" name="action" value="Generate Auto Expense Table">
+
+
+
+</form>
+
+
+</body>
+</html>
+
+
+

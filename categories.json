@@ -1,0 +1,125 @@
+{
+  "General": [
+    "Accounting",
+    "Advertising",
+    "Bank Charges",
+    "Car and truck expenses",
+    "Commissions and fees",
+    "Consulting",
+    "Contract labor",
+    "Dues and subscriptions",
+    "Delivery",
+    "Employee benefit programs",
+    "Entertainment-Deductible",
+    "Insurance",
+    "Work Compensation Insurance",
+    "Interest on loans",
+    "Legal and professional services",
+    "Marketing",
+    "Meetings",
+    "Meals-allowable",
+    "Office expenses",
+    "Postage",
+    "Printing",
+    "Recruiting",
+    "Pension and profit-sharing plans",
+    "Rent or lease",
+    "Repairs and maintenance",
+    "Supplies",
+    "Taxes and licenses",
+    "Cell phone",
+    "Internet",
+    "Travel",
+    "Tools",
+    "Utilities",
+    "Uniforms",
+    "Wages",
+    "Payroll taxes",
+    "Employee benefits",
+    "Self-Employed Health Insurance"
+
+
+
+  ],
+  "Trucking Business": [
+    "Fuel",
+    "IFTA",
+    "Oregon Taxes",
+    "Truck lease or rental",
+    "Bobtail insurance",
+    "Truck insurance",
+    "Truck repairs and maintenance",
+    "Truck supplies"
+  ],
+  "Construction": [
+    "Equipment rental",
+    "Labor costs (salaries, wages, and contract labor)",
+    "Waste disposal",
+    "Equipment insurance",
+    "Equipment repairs and maintenance",
+    "Licences Permits and Registrations",
+    "Materials"
+
+  ],
+  "Consulting": [
+    "Business Communications",
+    "Dues and subscriptions",
+    "Contuing educationa and training"
+  ],
+  "Interpreting": [
+   "Specialized equipment",
+    "Travel",
+    "Interpreting software"
+
+  ],
+  "Restaurants": [
+    "Food for resale",
+    "Restaurant supplies",
+    "Restaurant equipment",
+
+    "Beverages for resale"
+  ],
+
+  "Rental Business": [
+    "App fees",
+    "Cleaning",
+
+    " Rental Maintenance",
+    "Rental Property Taxes",
+    "Rental Property Utilities",
+    "Rental Property Insurance",
+    "Rental Property Repairs",
+    "Rental Property Advertising",
+    "Rental Property Management Fees",
+
+    "Property Management Software",
+    "Depreciation (based on the depreciation method)"
+
+  ],
+    "Day Care": [
+        "Food Per Diem",
+        "Toys Supplies",
+        "Entertainment Subscriptions",
+        "Kids Protective Equipment",
+        "Kids Clothing",
+      "Cleaning Supplies"
+
+
+    ],
+    "Other Expenses":
+    [
+      "Other_____________",
+      "Other2____________",
+      "Other3____________",
+      "Other4____________",
+      "Other5___________",
+      "Other6___________",
+      "Other7___________",
+      "Other8___________"
+
+
+
+    ]
+
+}
+

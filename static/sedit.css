@@ -1,0 +1,46 @@
+body {
+    background-color: #f8f9fa;
+}
+
+h2 {
+    color: #007bff;
+}
+
+.add {
+    margin-top: 10px;
+}
+
+.form-check-label {
+    margin-left: 10px;
+}
+
+.form-check {
+    margin-bottom:2px;
+}
+
+.btn-success {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.multi-columns {
+    column-count: 3;
+    column-gap: 3rem;
+}
+
+.category-block {
+    break-inside: avoid;
+    padding-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 992px) {
+    .multi-columns {
+        column-count: 2;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .multi-columns {
+        column-count: 1;
+    }
+}

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Select File</title>
+    </head>
+    <body>
+        <h1>Select a file to edit</h1>
+        <ul>
+            {% for file in files %}
+            <li><a href="/edit?file={{file}}">{{file}}</a></li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>

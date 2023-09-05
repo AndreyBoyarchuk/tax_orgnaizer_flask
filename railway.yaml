@@ -1,0 +1,8 @@
+services:
+  web:
+    image: python-3.11.5
+    build:
+      command: pip install -r requirements.txt
+    run:
+      command: python app.py
+    port: 5000

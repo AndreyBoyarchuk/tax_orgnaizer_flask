@@ -1,1 +1,1 @@
-web: gunicorn tax_organizer_flask.wsgi
+web: gunicorn main:app

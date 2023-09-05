@@ -1,1 +1,1 @@
-web: gunicorn app:app
+web: gunicorn tax_orgnaizer_flask:app
